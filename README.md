@@ -12,7 +12,7 @@
 '''
 git clone <url> -- url is http which we get in the github code.
 '''
-**Add the files to local area**
+**Add the files to temperary area**
 '''
 git add <file-name> 
 '''
@@ -22,7 +22,7 @@ git add .
 ''' 
 **Commit**
 '''
-git commit -m "short message for commiting"
+git commit -m "short message for commiting" --- commits to the with the local desktop that next needs to be pushed to the github
 '''
 **pushing the data to store**
 '''
