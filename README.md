@@ -26,5 +26,5 @@ git commit -m "short message for commiting" --- commits to the with the local de
 '''
 **pushing the data to store**
 '''
-git push -u origin
+git push -u origin main
 '''
