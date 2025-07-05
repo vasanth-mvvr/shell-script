@@ -28,3 +28,7 @@ git commit -m "short message for commiting" #commits to the with the local deskt
 ```
 git push -u origin main
 ```
+##multiple commands at once to save time
+```
+git add .;git commit -m "message"; git push -u origin main
+```
