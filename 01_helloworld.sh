@@ -1,1 +1,2 @@
-First shell script
+#!/bin/bash
+echo "This is my first shell script,Hello World"
