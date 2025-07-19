@@ -14,7 +14,7 @@ then
     exit 1 # Manual exit from numbers 1-127   ---------   so for success $? is 0 means the previous command executed successfully  
 else    
     echo "You are a super user"
-
+fi
 
 dnf install mysql -y
 
