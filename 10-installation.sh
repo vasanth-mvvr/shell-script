@@ -6,6 +6,8 @@
 
 #initialize a variable userid pass the value of user check if it is zero
 
+#To run we need to give the command "sudo sh <file_name>"
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
@@ -26,7 +28,7 @@ else
     echo "installation of mysql is success"
 fi
 
-#dnf install git -y
+dnf install git -y
 
 if [ $? -ne 0 ]
 then 
