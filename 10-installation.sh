@@ -14,7 +14,7 @@ then
     exit 1 # Manual exit from numbers 1-127   ---------   so for success $? is 0 means the previous command executed successfully  
 else    
     echo "You are a super user"
-fi
+
 
 dnf install mysql -y
 
@@ -26,7 +26,7 @@ else
     echo "installation of mysql is success"
 fi
 
-dnf install git -y
+#dnf install git -y
 
 if [ $? -ne 0]
 then 
@@ -34,4 +34,4 @@ then
     exit 1
 else
     echo "git installation successful"
-
+fi
