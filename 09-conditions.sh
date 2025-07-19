@@ -1,6 +1,11 @@
 #!/bin/bash
 
 NUMBER=$1
+# -gt greater
+# -lt lesser
+# -eq equal
+# -ge greater than equal
+# -le less than equal
 
 if [ $NUMBER -gt 10]
 then 
