@@ -8,7 +8,7 @@
 
 USERID=$(id -u)
 
-if [$USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo "You should have a super user to run the commands"
     exit 1 # Manual exit from numbers 1-127   ---------   so for success $? is 0 means the previous command executed successfully  
@@ -18,7 +18,7 @@ fi
 
 dnf install mysql -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "Mysql installation is failure"
     exit 1
@@ -28,7 +28,7 @@ fi
 
 #dnf install git -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "git installation failure. "
     exit 1
