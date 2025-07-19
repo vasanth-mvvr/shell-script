@@ -3,7 +3,7 @@
 #Arrays starts with index zero
 #Two ways to get the result that is 1.) $ and 2.) ${}
 
-MOVIES=("RRR" "PUSHPA")
+MOVIES=("RRR" "PUSHPA" "BAHUBALI")
 
 echo "The first movie is : ${MOVIES[0]}"
 echo "The second movie is : ${MOVIES[1]}"
