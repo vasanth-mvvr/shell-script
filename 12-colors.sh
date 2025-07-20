@@ -17,7 +17,7 @@ VALIDATE(){
         echo "$2 ... $R Failure $N " #Here we are using color code first we are enabling and then using it  "\e[31m "--> for red color
     else
         echo " $2 .... $G Success $N " #Here we are using color code first we are enabling and then using it  "\e[32m "--> for green color
-    else
+    fi
 }
 
 if [ $USERID -ne 0 ]
@@ -26,7 +26,7 @@ then
     exit 1
 else
     echo "you are super user"
-
+fi
 dnf install mysql -y &>>$LOGFILE #Appending the data to the logfile
 VALIDATE $? "Installing mysql"
 
