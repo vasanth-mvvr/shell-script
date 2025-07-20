@@ -12,7 +12,7 @@ TIMESTAMP=$(date +%F-%H-%M-%S)     #Here we will get the date and time
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1) #Here we are getting the file name with out extension using the cut command for the first fragment
 LOGFILE=/tmp/$TIMESTAMP-$SCRIPT_NAME.log #Here we have created a logfile which stores in the tmp directory
 VALIDATE(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then 
         echo " Failure $2" 
     else
