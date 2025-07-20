@@ -8,7 +8,7 @@ LOGFILE=/tmp/$TIMESTAMP-$SCRIP_TNAME.log #Here we have created a logfile which s
 
 R="\e[31m"
 G="\e[32m"
-N="\e[33m"
+N="\e[0m"
 
 echo "Script started executing : $TIMESTAMP"
 VALIDATE(){
