@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%I:%M:%S-%p)
-SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 R="\e[31m"
@@ -30,8 +30,8 @@ fi
 
 for i in {$@}
 do 
-    echo "The packages are : $i"
-    dnf list installed $i &>>$LOGFILE
+    echo "The packages is : $i"
+    dnf list installed $i -y &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
         echo -e "Packaged installed .. $Y Skipping $N"
