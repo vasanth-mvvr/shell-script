@@ -2,7 +2,7 @@
 
 #In this file we are making using of colors 
 USERID=$(id -u)
-TIMESTAMP=$(date +%F +%H-%M-%S)     #Here we will get the date and time
+TIMESTAMP=$(date +%F-%I:%M:%S-%p)     #Here we will get the date and time
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1) #Here we are getting the file name with out extension using the cut command for the first fragment
 LOGFILE=/tmp/$TIMESTAMP-$SCRIP_TNAME.log #Here we have created a logfile which stores in the tmp directory
 
