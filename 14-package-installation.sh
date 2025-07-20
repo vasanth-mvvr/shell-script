@@ -28,13 +28,13 @@ else
 fi
 
 
-for i in {$@}
+for i in $@
 do 
     echo "The packages is : $i"
     dnf list installed $i -y &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
-        echo -e "Packaged installed .. $Y Skipping $N"
+        echo -e "$i Package installed .. $Y Skipping $N"
     else 
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "Installing package $i"
