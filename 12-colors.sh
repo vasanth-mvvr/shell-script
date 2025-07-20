@@ -6,9 +6,9 @@ TIMESTAMP=$(date +%F-%I:%M:%S-%p)     #Here we will get the date and time
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1) #Here we are getting the file name with out extension using the cut command for the first fragment
 LOGFILE=/tmp/$TIMESTAMP-$SCRIP_TNAME.log #Here we have created a logfile which stores in the tmp directory
 
-R=\e[31m
-G=\e[32m
-N=\e[33m
+R=/e[31m
+G=/e[32m
+N=/e[33m
 
 echo "Script started executing : $TIMESTAMP"
 VALIDATE(){
