@@ -12,7 +12,7 @@ N=\e[33m
 
 echo "Script started executing : $TIMESTAMP"
 VALIDATE(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then 
         echo "$2 ... $R Failure $N " #Here we are using color code first we are enabling and then using it  "\e[31m "--> for red color
     else
