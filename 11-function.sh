@@ -22,10 +22,10 @@ VALIDATE(){
 
 if [ $USERID -ne 0 ]
 then 
-    echo "you need to have super user access"
+    echo " $Y you need to have super user access $N"
     exit 1
 else
-    echo "you are super user"
+    echo "$G you are super user $N"
 fi
 
 dnf install mysql -y &>>$LOGFILE #Appending the data to the logfile
