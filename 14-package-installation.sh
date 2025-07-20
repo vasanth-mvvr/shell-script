@@ -1,14 +1,14 @@
 #!/bin/bash
 
 USERID=$(id -u)
-TIMESTAMP=$(data +%F-%I:%M:%S-%p)
+TIMESTAMP=$(date +%F-%I:%M:%S-%p)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
-R=/e[31m
-G=/e[32m
-Y=/e[33m
-N=/e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -18,7 +18,8 @@ VALIDATE(){
         echo -e "$2 $G SUCCESS $N"
     fi
 }
-if [ $USERID -ne 0]
+
+if [ $USERID -ne 0 ]
 then 
     echo "you are not a super user"
     exit 1
