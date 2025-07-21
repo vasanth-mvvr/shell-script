@@ -22,10 +22,10 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 while IFS= read -r line #IFS -- internal field separator
 do 
 echo "log files : $line"
-zip $line.zip 
+zip /tmp/zipped_files.zip $line
 VALIDATE $? "Zipped"
-mv /tmp/zipped_files
-VALIDATE $? "Installed"
+# mv /tmp/zipped_files
+# VALIDATE $? "Installed"
 # if [ -f $MOVE ]
 # then 
 #     echo "moved files successfully"
