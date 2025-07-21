@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 SOURCE_DIRECTORY=/tmp/apps-log
 
 R="\e[31m"
