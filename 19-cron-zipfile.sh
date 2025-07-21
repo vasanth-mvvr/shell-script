@@ -1,6 +1,14 @@
 #!/bin/bash
-
-SOURCE_DIRECTORY=/tmp/app-log
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then 
+        echo "Failure $2"
+        exist 1
+    else
+        echo "success $2"
+    fi
+}
+SOURCE_DIRECTORY=/tmp/app
 
 if [ -d $SOURCE_DIRECTORY ]
 then 
@@ -15,11 +23,13 @@ while IFS= read -r line #IFS -- internal field separator
 do 
 echo "log files : $line"
 zip $line.zip 
-MOVE=mv /tmp/zipped_files
-if [ -f $MOVE ]
-then 
-    echo "moved files successfully"
-else
-    echo "files not moved"
-fi
+VALIDATE $? "Zipped"
+mv /tmp/zipped_files
+VALIDATE $? "Installed"
+# if [ -f $MOVE ]
+# then 
+#     echo "moved files successfully"
+# else
+#     echo "files not moved"
+# fi
 done <<< $FILES
