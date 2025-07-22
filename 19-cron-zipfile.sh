@@ -3,7 +3,7 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then 
         echo "Failure $2"
-        exist 1
+        exit 1
     else
         echo "success $2"
     fi
