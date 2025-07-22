@@ -27,7 +27,7 @@ USAGE=$(echo "$line" | awk -F " " '{print $6}' | cut -d "%" -f1)
 FOLDER=$(echo "$line" | awk -F " " '{print $N}')
 if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
-        echo -e "$R The folder $FOLDER if greater than the current usage $DISK_THRESHOLD  current usage : $USAGE $N"
+        echo -e "$R  $FOLDER if more than the  $DISK_THRESHOLD  current usage : $USAGE $N"
 fi
 done <<< $DISK_USAGE
 
