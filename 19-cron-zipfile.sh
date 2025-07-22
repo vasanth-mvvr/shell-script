@@ -24,12 +24,4 @@ do
 echo "log files : $line"
 zip /tmp/zipped_files/zip_files.zip $line
 VALIDATE $? "Zipped"
-# mv /tmp/zipped_files
-# VALIDATE $? "Installed"
-# if [ -f $MOVE ]
-# then 
-#     echo "moved files successfully"
-# else
-#     echo "files not moved"
-# fi
 done <<< $FILES
