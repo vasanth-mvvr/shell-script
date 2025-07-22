@@ -1,5 +1,8 @@
 #!/bin/bash
 
+R="\e[31m"
+G="\e[32m"
+N="\e[30m"
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=75
 
@@ -8,6 +11,11 @@ while IFS= read -r line
 do
 DISK_VALUE=$(awk -F " " '{print $6}' | cut -d "%" -f1)
 echo "$DISK_VALUE"
-
+if [ $DISK_VALUE -ge $DISK_THRESHOLD ] 
+then 
+    echo -e "$R The data is almost full : $DISK_VALUE $N "
+else
+    echo -e "$G The data is almost full : $DISK_VALUE $N "
+fi
 #awk -F " " '{$print $6}'
 done <<< $DISK_USAGE 
