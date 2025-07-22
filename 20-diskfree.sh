@@ -32,4 +32,4 @@ do
 done <<< $DISK_USAGE
 
 echo -e "$MESSAGE"
-#echo -e "$Message" | mail -s "subject" veeravasanthreddym@gmail.com
+echo -e "$Message" | mail -s "subject" veeravasanthreddy2003@gmail.com
