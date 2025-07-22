@@ -5,6 +5,7 @@ G="\e[32m"
 N="\e[30m"
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=6
+MESSAGE=""
 
 #echo "The disk usage is : $DISK_USAGE "
 # while IFS= read -r line
@@ -26,8 +27,8 @@ USAGE=$(echo "$line" | awk -F " " '{print $6}' | cut -d "%" -f1)
 FLODER=$(echo "$line" | awk -F " " '{print $N}')
 if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
-        echo -e "$R The folder $FOLDER if greater than the $DISK_THRESHOLD of the current usage : $USAGE $N"
-    else
-        echo -e "$G The folder  $FOLDER is normal usage :$USAGE $N"
+        echo -e "$R The folder $FOLDER if greater than the current usage $DISK_THRESHOLD  current usage : $USAGE $N"
 fi
 done <<< $DISK_USAGE
+
+echo "MESSAGE:$MESSAGE"
