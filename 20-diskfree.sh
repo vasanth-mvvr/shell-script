@@ -10,12 +10,12 @@ echo "The disk usage is : $DISK_USAGE "
 while IFS= read -r line
 do
 DISK_VALUE=$(awk -F " " '{print $6}' | cut -d "%" -f1)
-echo "$DISK_VALUE"
-if [ $DISK_VALUE -ge 75 ] 
+#echo "$DISK_VALUE"
+if [ $DISK_VALUE -ge $DISK_THRESHOLD ] 
 then 
     echo -e "$R The data is almost full : $DISK_VALUE $N "
 else
-    echo -e "$G The data is almost full : $DISK_VALUE $N "
+    echo -e "$G The data is not full : $DISK_VALUE $N "
 fi
 #awk -F " " '{$print $6}'
 done <<< $DISK_USAGE 
