@@ -28,4 +28,4 @@ if [ $USAGE -ge $DISK_THRESHOLD ]
     then 
         echo "The folder $FOLDER if greater than the $DISK_THRESHOLD of the current usage : $USAGE"
 fi
-done
+done <<< $DISK_USAGE
