@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[30m"
 DISK_USAGE=$(df -hT | grep xfs)
-DISK_THRESHOLD=75
+DISK_THRESHOLD=6
 
 #echo "The disk usage is : $DISK_USAGE "
 # while IFS= read -r line
