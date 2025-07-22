@@ -11,7 +11,7 @@ while IFS= read -r line
 do
 DISK_VALUE=$(awk -F " " '{print $6}' | cut -d "%" -f1)
 echo "$DISK_VALUE"
-if [ $DISK_VALUE -ge $DISK_THRESHOLD ] 
+if [ $DISK_VALUE -ge 75 ] 
 then 
     echo -e "$R The data is almost full : $DISK_VALUE $N "
 else
